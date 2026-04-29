@@ -6,7 +6,7 @@
 
 ---
 
-## 🏆 Certificate
+## Certificate
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/promit7473/deep-rl-course-hf/main/certificate_preview.png" width="600"/>
