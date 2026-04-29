@@ -11,7 +11,7 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from stable_baselines3.common.evaluation import evaluate_policy
 
-HF_USERNAME = "promit7473"
+HF_USERNAME = "mhpromit7473"
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 

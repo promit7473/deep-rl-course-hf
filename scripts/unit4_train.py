@@ -22,7 +22,7 @@ import gymnasium as gym
 from huggingface_hub import HfApi, upload_folder
 from huggingface_hub.repocard import metadata_eval_result, metadata_save
 
-HF_USERNAME = "promit7473"
+HF_USERNAME = "mhpromit7473"
 HF_TOKEN = os.environ.get("HF_TOKEN")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")

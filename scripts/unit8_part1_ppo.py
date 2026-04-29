@@ -1,7 +1,7 @@
 """
 Unit 8 Part 1: PPO from scratch (CleanRL style) on LunarLander-v2.
 Adapted from the course notebook to use modern gymnasium API.
-Run: python unit8_part1_ppo.py --env-id LunarLander-v2 --repo-id promit7473/ppo-LunarLander-v2-cleanrl --total-timesteps 500000
+Run: python unit8_part1_ppo.py --env-id LunarLander-v2 --repo-id mhpromit7473/ppo-LunarLander-v2-cleanrl --total-timesteps 500000
 """
 import argparse
 import os
@@ -54,7 +54,7 @@ def parse_args():
     parser.add_argument("--vf-coef", type=float, default=0.5)
     parser.add_argument("--max-grad-norm", type=float, default=0.5)
     parser.add_argument("--target-kl", type=float, default=None)
-    parser.add_argument("--repo-id", type=str, default="promit7473/ppo-LunarLander-v2-cleanrl")
+    parser.add_argument("--repo-id", type=str, default="mhpromit7473/ppo-LunarLander-v2-cleanrl")
     args = parser.parse_args()
     args.batch_size = int(args.num_envs * args.num_steps)
     args.minibatch_size = int(args.batch_size // args.num_minibatches)

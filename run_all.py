@@ -27,7 +27,7 @@ UNITS = {
     "6":  ("python", str(SCRIPTS_DIR / "unit6_train.py")),
     "8a": ("python", str(SCRIPTS_DIR / "unit8_part1_ppo.py"),
            "--env-id", "LunarLander-v2",
-           "--repo-id", "promit7473/ppo-LunarLander-v2-cleanrl",
+           "--repo-id", "mhpromit7473/ppo-LunarLander-v2-cleanrl",
            "--total-timesteps", "500000"),
     "8b": ("python", str(SCRIPTS_DIR / "unit8_part2_train.py")),
 }

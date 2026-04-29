@@ -9,7 +9,7 @@ Prerequisites:
 import os
 import sys
 
-HF_USERNAME = "promit7473"
+HF_USERNAME = "mhpromit7473"
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 try:

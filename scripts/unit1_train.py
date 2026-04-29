@@ -9,7 +9,7 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.monitor import Monitor
 
-HF_USERNAME = "promit7473"
+HF_USERNAME = "mhpromit7473"
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 env = make_vec_env("LunarLander-v2", n_envs=16)

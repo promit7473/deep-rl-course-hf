@@ -14,7 +14,7 @@ import json
 from huggingface_hub import HfApi, snapshot_download
 from huggingface_hub.repocard import metadata_eval_result, metadata_save
 
-HF_USERNAME = "promit7473"
+HF_USERNAME = "mhpromit7473"
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 

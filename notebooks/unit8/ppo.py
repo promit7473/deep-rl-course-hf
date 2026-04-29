@@ -86,7 +86,7 @@ def parse_args():
         help="the target KL divergence threshold")
     
     # Adding HuggingFace argument
-    parser.add_argument("--repo-id", type=str, default="promit7473/ppo-LunarLander-v2-cleanrl", help="id of the model repository from the Hugging Face Hub {username/repo_name}")
+    parser.add_argument("--repo-id", type=str, default="mhpromit7473/ppo-LunarLander-v2-cleanrl", help="id of the model repository from the Hugging Face Hub {username/repo_name}")
 
     args = parser.parse_args()
     args.batch_size = int(args.num_envs * args.num_steps)
