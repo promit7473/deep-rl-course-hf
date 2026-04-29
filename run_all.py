@@ -20,16 +20,16 @@ SCRIPTS_DIR = Path(__file__).parent / "scripts"
 HF_TOKEN = os.environ.get("HF_TOKEN", "")
 
 UNITS = {
-    "1":  ("python", str(SCRIPTS_DIR / "unit1_train.py")),
-    "2":  ("python", str(SCRIPTS_DIR / "unit2_train.py")),
+    "1":  ("python3", str(SCRIPTS_DIR / "unit1_train.py")),
+    "2":  ("python3", str(SCRIPTS_DIR / "unit2_train.py")),
     "3":  ("bash",   str(SCRIPTS_DIR / "unit3_train.sh")),
-    "4":  ("python", str(SCRIPTS_DIR / "unit4_train.py")),
-    "6":  ("python", str(SCRIPTS_DIR / "unit6_train.py")),
-    "8a": ("python", str(SCRIPTS_DIR / "unit8_part1_ppo.py"),
+    "4":  ("python3", str(SCRIPTS_DIR / "unit4_train.py")),
+    "6":  ("python3", str(SCRIPTS_DIR / "unit6_train.py")),
+    "8a": ("python3", str(SCRIPTS_DIR / "unit8_part1_ppo.py"),
            "--env-id", "LunarLander-v3",
            "--repo-id", "mhpromit7473/ppo-LunarLander-v3-cleanrl",
            "--total-timesteps", "500000"),
-    "8b": ("python", str(SCRIPTS_DIR / "unit8_part2_train.py")),
+    "8b": ("python3", str(SCRIPTS_DIR / "unit8_part2_train.py")),
 }
 
 SKIPPED = {

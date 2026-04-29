@@ -24,6 +24,8 @@ from torch.distributions.categorical import Categorical
 from torch.utils.tensorboard import SummaryWriter
 
 import gymnasium as gym
+from gymnasium.envs.registration import register
+register(id="LunarLander-v2", entry_point="gymnasium.envs.box2d:LunarLander", max_episode_steps=1000, reward_threshold=200)
 
 from huggingface_hub import HfApi, upload_folder
 from huggingface_hub.repocard import metadata_eval_result, metadata_save
@@ -37,7 +39,7 @@ def parse_args():
     parser.add_argument("--seed", type=int, default=1)
     parser.add_argument("--torch-deterministic", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True)
     parser.add_argument("--cuda", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True)
-    parser.add_argument("--env-id", type=str, default="LunarLander-v3")
+    parser.add_argument("--env-id", type=str, default="LunarLander-v2")
     parser.add_argument("--total-timesteps", type=int, default=500_000)
     parser.add_argument("--learning-rate", type=float, default=2.5e-4)
     parser.add_argument("--num-envs", type=int, default=4)
@@ -54,7 +56,7 @@ def parse_args():
     parser.add_argument("--vf-coef", type=float, default=0.5)
     parser.add_argument("--max-grad-norm", type=float, default=0.5)
     parser.add_argument("--target-kl", type=float, default=None)
-    parser.add_argument("--repo-id", type=str, default="mhpromit7473/ppo-LunarLander-v3-cleanrl")
+    parser.add_argument("--repo-id", type=str, default="mhpromit7473/ppo-LunarLander-v2-cleanrl")
     args = parser.parse_args()
     args.batch_size = int(args.num_envs * args.num_steps)
     args.minibatch_size = int(args.batch_size // args.num_minibatches)

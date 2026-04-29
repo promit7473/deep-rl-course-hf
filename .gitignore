@@ -1,1 +1,34 @@
-deep_rl_course_to_pdf.py
+# Large training artifacts
+train_dir/
+training-envs-executables/
+results/
+logs/
+runs/
+config/
+
+# VizDoom
+_vizdoom/
+_vizdoom.ini
+
+# Model zips & weights (hosted on HF Hub)
+*.zip
+vec_normalize.pkl
+hub/dqn-SpaceInvadersNoFrameskip-v4/
+# Keep q-learning.pkl (small, 24KB)
+*.pkl
+!hub/q-learning.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
