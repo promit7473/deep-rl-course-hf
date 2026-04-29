@@ -237,7 +237,7 @@ push_to_hub(
 # ============================================================
 print("\n=== Pixelcopter-PLE-v0 ===")
 try:
-    import gym_pygame  # noqa: F401
+    import pixelcopter_env  # registers Pixelcopter-PLE-v0
     env_id = "Pixelcopter-PLE-v0"
     env = gym.make(env_id)
     eval_env = gym.make(env_id, render_mode="rgb_array")

@@ -1,5 +1,5 @@
 """
-Unit 1: Train PPO agent on LunarLander-v2, upload to HuggingFace Hub.
+Unit 1: Train PPO agent on LunarLander-v3, upload to HuggingFace Hub.
 """
 import os
 import gymnasium as gym
@@ -12,7 +12,7 @@ from stable_baselines3.common.monitor import Monitor
 HF_USERNAME = "mhpromit7473"
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
-env = make_vec_env("LunarLander-v2", n_envs=16)
+env = make_vec_env("LunarLander-v3", n_envs=16)
 
 model = PPO(
     policy="MlpPolicy",
@@ -27,23 +27,23 @@ model = PPO(
     device="cuda",
 )
 
-print("Training PPO on LunarLander-v2 ...")
+print("Training PPO on LunarLander-v3 ...")
 model.learn(total_timesteps=1_000_000)
-model.save("ppo-LunarLander-v2")
+model.save("ppo-LunarLander-v3")
 
-eval_env = Monitor(gym.make("LunarLander-v2", render_mode="rgb_array"))
+eval_env = Monitor(gym.make("LunarLander-v3", render_mode="rgb_array"))
 mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=10, deterministic=True)
 print(f"mean_reward={mean_reward:.2f} +/- {std_reward:.2f}")
 
 print("Uploading to HuggingFace Hub ...")
 package_to_hub(
     model=model,
-    model_name="ppo-LunarLander-v2",
+    model_name="ppo-LunarLander-v3",
     model_architecture="PPO",
-    env_id="LunarLander-v2",
+    env_id="LunarLander-v3",
     eval_env=eval_env,
-    repo_id=f"{HF_USERNAME}/ppo-LunarLander-v2",
-    commit_message="Trained PPO on LunarLander-v2 - Unit 1",
+    repo_id=f"{HF_USERNAME}/ppo-LunarLander-v3",
+    commit_message="Trained PPO on LunarLander-v3 - Unit 1",
     token=HF_TOKEN,
 )
 print("Done! Unit 1 complete.")

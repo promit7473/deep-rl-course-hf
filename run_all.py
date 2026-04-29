@@ -26,8 +26,8 @@ UNITS = {
     "4":  ("python", str(SCRIPTS_DIR / "unit4_train.py")),
     "6":  ("python", str(SCRIPTS_DIR / "unit6_train.py")),
     "8a": ("python", str(SCRIPTS_DIR / "unit8_part1_ppo.py"),
-           "--env-id", "LunarLander-v2",
-           "--repo-id", "mhpromit7473/ppo-LunarLander-v2-cleanrl",
+           "--env-id", "LunarLander-v3",
+           "--repo-id", "mhpromit7473/ppo-LunarLander-v3-cleanrl",
            "--total-timesteps", "500000"),
     "8b": ("python", str(SCRIPTS_DIR / "unit8_part2_train.py")),
 }
@@ -40,7 +40,7 @@ SKIPPED = {
 }
 
 ESTIMATED_TIMES = {
-    "1":  "~20 min  (PPO LunarLander-v2, 1M steps)",
+    "1":  "~20 min  (PPO LunarLander-v3, 1M steps)",
     "2":  "~2 min   (Q-Learning FrozenLake + Taxi)",
     "3":  "~60 min  (DQN SpaceInvaders, 1M steps)",
     "4":  "~10 min  (Reinforce CartPole) + ~2 hrs (PixelCopter 50k eps)",
